@@ -42,7 +42,7 @@ Constraints'''
 def count_substring(string, sub_string):
     c=0
     for i in range(len(string)-len(sub_string)+1):
-        if string[i:i+len(sub_string)] == sub_string:
+        if string[i:i+len(sub_string)] == sub_string:#output = string[0:3], string[1:4], string[2:5], string[3:6], string[4:7]
             c +=1
     return c
 
