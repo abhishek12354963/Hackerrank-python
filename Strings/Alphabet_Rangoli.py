@@ -86,10 +86,10 @@ def print_rangoli(size):
     alphabet=list("abcdefghijklmnopqrstuvwxyz")
     alphabet=alphabet[:size]
     indices =list(range(size))
-    indices =indices[:-1]+indices[::-1]
+    indices =indices[:-1]+indices[::-1]#output = [0, 1, 2, 3, 4, 3, 2, 1]
     for i in indices:
-        start_index= i + 1
-        org=alphabet[-start_index:]
+        start_index= i + 1#output = [1, 2, 3, 4, 5, 4, 3, 2]
+        org=alphabet[-start_index:] #output = ['e', 'd', 'c', 'b', 'a'] for size=5
         rev=org[::-1]
         row=rev+org[1:]
         row="-".join(row)
